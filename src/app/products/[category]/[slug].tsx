@@ -4,23 +4,17 @@ import { Product } from "@/models/Product";
 import { products } from "@/data/products";
 
 import ProductDetails from "@/components/ProductDetails";
-import { useRouter } from "next/router";
+import GoBackLink from "@/components/links/GoBackLink";
 
 interface ProductPageProps {
   product: Product;
 }
 
 export default function ProductPage({ product }: ProductPageProps) {
-  const router = useRouter();
   return (
     <div className="container mx-auto p-4">
       {/* ✅ Go Back Button */}
-      <button
-        onClick={() => router.back()}
-        className="text-gray-600 hover:text-orange-500 mb-6 inline-flex items-center"
-      >
-        ← Go Back
-      </button>
+      <GoBackLink />
       <ProductDetails product={product} />
     </div>
   );

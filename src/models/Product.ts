@@ -39,3 +39,9 @@ export interface Other {
   name: string;
   image: CategoryImage;
 }
+
+export type OtherProductsProps = {
+  slug: string;
+  name: string;
+  image: { mobile: string; tablet: string; desktop: string };
+};
