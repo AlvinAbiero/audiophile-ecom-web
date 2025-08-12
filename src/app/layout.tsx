@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import Header from "@/components/header/Header";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 
@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.className}  antialiased`}>
-        <div>
+        <div className=''>
           <Header />
-          <main className="mx-auto overflow-hidden">{children}</main>
+          <main className="mx-auto">{children}</main>
           <Footer />
         </div>
         <Toaster
