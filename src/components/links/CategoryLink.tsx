@@ -12,7 +12,7 @@ const CategoryLink = ({
   url: string;
 }) => {
   return (
-    <div className="bg-gray-300 text-center rounded-md relative cursor-pointer hover:outline-[2px] hover:outline-dashed hover:outline-red-600 hover:outline-offset-[4px] flex-1">
+    <div className="bg-gray-200 text-center rounded-md relative cursor-pointer hover:outline-[2px] hover:outline-dashed hover:outline-red-600 hover:outline-offset-[4px] flex-1">
       <Link href={url} passHref>
         <div className="pt-[5.5rem] pb-[1.375rem] px-4 sm:px-0">
           <Image
@@ -28,7 +28,7 @@ const CategoryLink = ({
             {text}
           </h2>
           <div className="flex justify-center items-center  hover:cursor-pointer gap-4">
-            <p className="font-bold text-[.8rem] uppercase cursor-pointer hover:text-orange-400">
+            <p className="font-bold text-[.8rem] text-gray-400 uppercase cursor-pointer hover:text-orange-400">
               Shop
             </p>
             <Image

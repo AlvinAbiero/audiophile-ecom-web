@@ -7,3 +7,11 @@ interface CartItem {
 }
 
 export default CartItem;
+
+export interface CartItemType {
+  id: number;
+  shortName: string;
+  cartImage: string;
+  price: number;
+  quantity: number;
+}

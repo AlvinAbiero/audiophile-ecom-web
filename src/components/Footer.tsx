@@ -7,7 +7,7 @@ import SocialLinks from "./links/SocialLinks";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="bg-black md:mt-[7.5rem] lg:mt-[12.5rem] mt-[6rem] relative">
+    <div className="bg-black relative">
       <div className="absolute w-30 h-[.35rem] bg-orange-400 top-0 left-6"></div>
       <div className="container pb-[2rem] max-w-7xl pt-[3.25rem] md:pt-[3.75rem] lg:pt-[4.5rem] relative mx-auto px-6">
         <div className="md:flex md:gap-[3rem] flex-column md:space-y-0 space-y-5 md:justify-between lg:w-full">
