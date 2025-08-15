@@ -17,7 +17,9 @@ const ProductQuantity = ({
   return (
     <div className={`bg-gray-200 flex items-center ${width} ${height}`}>
       <QuantityButton sign="-" handleClick={decrement} />
-      <div className="w-1/5 text-sm font-bold text-center">{quantity}</div>
+      <div className="w-1/5 text-sm font-bold text-black text-center">
+        {quantity}
+      </div>
       <QuantityButton sign="+" handleClick={increment} />
     </div>
   );

@@ -11,11 +11,11 @@ const OtherProducts: React.FC<{ other: OtherProductsProps[] | undefined }> = ({
   other,
 }) => {
   return (
-    <div className="mt-[7.5rem] text-center mb-[9.5rem] lg:mb-[11.5rem]">
-      <h2 className="text-[1.5rem] md:text-[2rem] font-bold">
+    <div className="mt-[7.5rem] text-center mb-[9.5rem] lg:mb-[11.5rem] mx-auto">
+      <h2 className="text-[1.5rem] text-black md:text-[2rem] font-bold uppercase">
         You may also like
       </h2>
-      <div className="mt-10 sm:mt-14 lg:mt-16 flex flex-col md:flex-row gap-[3.5rem] md:gap-4 lg:gap-[1.875rem]">
+      <div className="mt-10 sm:mt-14 lg:mt-16 flex flex-col md:flex-row gap-[3.5rem] md:gap-6 lg:gap-[1.875rem] items-center">
         {other?.map((product: OtherProductsProps) => (
           <ProductLink key={product.slug} {...product} />
         ))}
