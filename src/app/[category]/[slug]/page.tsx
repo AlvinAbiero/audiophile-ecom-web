@@ -75,8 +75,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <div className="mx-auto w-full bg-white overflow-hidden">
       {/* ✅ Go Back Button */}
-      <div className="w-full container mx-auto flex flex-col items-center justify-center">
-        <div className="self-start m-4">
+      <div className="w-full mx-auto flex flex-col items-center justify-center">
+        <div className="self-start mt-4 ml-12">
           <GoBackLink />
         </div>
 

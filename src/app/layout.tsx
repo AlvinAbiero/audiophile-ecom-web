@@ -4,6 +4,9 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import CartModal from "@/components/modals/CartModal";
+import CheckoutModal from "@/components/modals/CheckoutModal";
+import Overlay from "@/components/header/Overlay";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -12,7 +15,10 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Audiophile",
+  title: {
+    template: "%s / Audiophile Shop",
+    default: "Audiophile Shop",
+  },
   description:
     "This is an ecommerce website for audiophiles shop that sells high-quality audio products.",
   icons: {
@@ -28,16 +34,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.className}  antialiased`}>
-        <div className=''>
-          <Header />
-          <main className="mx-auto">{children}</main>
-          <Footer />
-        </div>
+        <Header />
+        <main className="mx-auto">{children}</main>
+        <Footer />
+        <CartModal />
+        <CheckoutModal />
+        <Overlay />
+
         <Toaster
           position="top-center"
           toastOptions={{
             duration: 3000,
-            style: { fontSize: "1.6rem", padding: "1.4rem 2.4rem" },
+            style: { fontSize: ".8rem", padding: "1.4rem 2.4rem" },
           }}
         />
       </body>

@@ -29,7 +29,7 @@ const ProductDescription = ({ product }: { product: Product }) => {
   const decrement = () => setQuantity((q) => (q > 1 ? q - 1 : q));
   return (
     <div className="flex flex-col text-left sm:basis-[60%] lg:basis-[50%]">
-      <h2 className="uppercase text-[1.75rem] lg:text-[2.5rem] tracking-[0.0625rem] mb-6 max-w-[13ch]">
+      <h2 className="uppercase text-[1.75rem] lg:text-[2.5rem] tracking-[0.0625rem] mb-6 max-w-[13ch] text-black font-bold">
         {product.new && (
           <strong className="block uppercase text-orange-500 text-sm tracking-[0.625rem] font-normal mb-6 sm:mb-4">
             New Product
@@ -38,7 +38,7 @@ const ProductDescription = ({ product }: { product: Product }) => {
         {product.name}
       </h2>
 
-      <p className="mb-6 lg:pr-8">{product.description}</p>
+      <p className="mb-6 lg:pr-8 text-gray-500">{product.description}</p>
 
       <p className="mt-6 font-bold text-lg text-black">
         $ {product?.price?.toLocaleString("en-US")}
@@ -53,7 +53,7 @@ const ProductDescription = ({ product }: { product: Product }) => {
         />
         <button
           onClick={handleAddToCart}
-          className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 uppercase text-sm tracking-widest"
+          className="bg-orange-500/80 hover:bg-orange-600 text-white px-6 py-3 uppercase text-sm tracking-widest cursor-pointer"
         >
           Add to Cart
         </button>

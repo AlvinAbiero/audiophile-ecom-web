@@ -7,7 +7,7 @@ const GoBackLink = () => {
   return (
     <button
       onClick={() => router.back()}
-      className="text-gray-600 hover:text-orange-500 mb-6 inline-flex items-center cursor-pointer"
+      className="text-gray-600 hover:text-orange-500 inline-flex items-center cursor-pointer"
     >
       ← Go Back
     </button>

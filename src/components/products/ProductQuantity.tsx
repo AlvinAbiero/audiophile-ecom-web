@@ -36,7 +36,7 @@ const QuantityButton = ({ sign, handleClick }: QunatityButtonProps) => {
   return (
     <button
       onClick={handleClick}
-      className="w-2/5 h-full text-black font-bold text-base border-none p-0 bg-transparent hover:bg-gray-300 hover:text-orange-500"
+      className="w-2/5 h-full text-black font-bold text-base border-none p-0 bg-transparent hover:bg-gray-300 hover:text-orange-500 cursor-pointer"
     >
       {sign}
     </button>

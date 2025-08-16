@@ -5,7 +5,7 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="bg-black py-8 max-w-7xl lg:px-12 mx-auto">
+    <header className="bg-black pt-8 pb-6 max-w-7xl lg:px-12 mx-auto">
       <Navbar />
       <MobileNav />
     </header>

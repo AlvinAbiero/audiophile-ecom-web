@@ -23,7 +23,7 @@ const CartItem = (item: CartItemType) => {
           <p className="font-bold text-[0.9375rem] text-black uppercase">
             {item.shortName}
           </p>
-          <p className="font-bold text-sm">
+          <p className="font-bold text-sm text-gray-400">
             $ {item.price.toLocaleString("en-US")}
           </p>
         </div>

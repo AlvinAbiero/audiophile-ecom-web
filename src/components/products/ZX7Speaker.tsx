@@ -31,7 +31,7 @@ const ZX7Speaker = () => {
           <h2 className="mb-8 text-[1.75rem] font-bold text-black">
             ZX7 Speaker
           </h2>
-          <Link href="/products/speakers/zx7-speaker">
+          <Link href="/speakers/zx7-speaker">
             <button className="border border-black px-6 py-2 uppercase tracking-wider text-sm font-medium text-black hover:bg-black hover:text-white transition cursor-pointer">
               See Product
             </button>

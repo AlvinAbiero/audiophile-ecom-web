@@ -28,11 +28,11 @@ const ProductLink = ({ slug, name, image }: OtherProductsProps) => {
           className="block md:hidden rounded-md"
         />
       </div>
-      <h3 className="text-[1.5rem] mt-[2rem] tracking-wider uppercase text-black">
+      <h3 className="text-[1.5rem] mt-[2rem] tracking-wider uppercase text-black font-semibold">
         {name}
       </h3>
-      <Link href={`/products/${slug}`}>
-        <button className="cursor-pointer mt-[32px] text-white bg-orange-400 py-2 px-6 uppercase text-[.7rem]">
+      <Link href={`/${slug}`}>
+        <button className="cursor-pointer mt-6 text-white bg-orange-500/80 hover:bg-orange-600 py-2 px-6 uppercase text-[.7rem]">
           See Product
         </button>
       </Link>

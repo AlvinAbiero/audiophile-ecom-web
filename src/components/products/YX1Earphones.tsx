@@ -31,7 +31,7 @@ const YX1Earphones = () => {
             <h2 className="text-2xl font-bold mb-8 text-black">
               YX1 Earphones
             </h2>
-            <Link href="/products/earphones/yx1-earphones">
+            <Link href="/earphones/yx1-earphones">
               <span className="inline-block text-black border border-black px-6 py-2 text-sm font-semibold tracking-wider uppercase hover:bg-black hover:text-white transition">
                 See Product
               </span>

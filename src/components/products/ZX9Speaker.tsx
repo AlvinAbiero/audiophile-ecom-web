@@ -43,7 +43,7 @@ const ZX9Speaker = () => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <Link href="/products/speakers/zx9-speaker">
+          <Link href="/speakers/zx9-speaker">
             <button className="bg-black hover:bg-[#4C4C4C] text-white px-8 py-3 uppercase tracking-widest cursor-pointer">
               See Product
             </button>

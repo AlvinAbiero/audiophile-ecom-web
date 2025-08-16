@@ -14,13 +14,34 @@ const Hero = () => {
       {/* Background Image */}
       {/* <div className="absolute inset-0 -top-24 z-[-1] bg-center  bg-no-repeat bg-[url('/images/home/mobile/image-hero.jpg')] sm:bg-[url('/images/home/tablet/image-hero.jpg')] lg:bg-[url('/images/home/desktop/image-hero.jpg')]"></div> */}
       {/* Mobile background */}
-      <div className="absolute inset-0 -top-24 z-[-1] bg-center bg-no-repeat bg-[url('/images/home/mobile/image-hero.jpg')] sm:hidden"></div>
+      <MotionDiv
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 1.5, duration: 2 },
+        }}
+        className="absolute inset-0 -top-24 z-[-1] bg-center bg-no-repeat bg-[url('/images/home/mobile/image-hero.jpg')] sm:hidden"
+      ></MotionDiv>
 
       {/* Tablet background */}
-      <div className="absolute inset-0 -top-24 z-[-1] bg-center bg-no-repeat bg-[url('/images/home/tablet/image-hero.jpg')] hidden sm:block lg:hidden"></div>
+      <MotionDiv
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 1.5, duration: 2 },
+        }}
+        className="absolute inset-0 -top-24 z-[-1] bg-center bg-no-repeat bg-[url('/images/home/tablet/image-hero.jpg')] hidden sm:block lg:hidden"
+      ></MotionDiv>
 
       {/* Desktop background */}
-      <div className="absolute inset-0 -top-24 z-[-1] bg-center bg-no-repeat bg-[url('/images/home/desktop/image-hero.jpg')] hidden lg:block"></div>
+      <MotionDiv
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 1.5, duration: 2 },
+        }}
+        className="absolute inset-0 -top-24 z-[-1] bg-center bg-no-repeat bg-[url('/images/home/desktop/image-hero.jpg')] hidden lg:block"
+      ></MotionDiv>
 
       {/* Container */}
       <MotionDiv
@@ -46,7 +67,7 @@ const Hero = () => {
           for the passionate music enthusiast.
         </p>
 
-        <Link href="/products/headphones/xx99-mark-two-headphones" passHref>
+        <Link href="/headphones/xx99-mark-two-headphones" passHref>
           <button className="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3 uppercase tracking-wider text-sm cursor-pointer">
             See Product
           </button>

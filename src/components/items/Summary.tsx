@@ -21,8 +21,8 @@ const Summary = ({
     setIsDisabled(items.length < 1);
   }, [items, setIsDisabled]);
   return (
-    <div className="px-6 sm:px-8 py-8 bg-white flex-grow">
-      <h2 className="text-lg tracking-[0.0806rem] font-bold uppercase">
+    <div className="px-6 sm:px-8 py-8 bg-white w-full lg:w-auto flex-grow">
+      <h2 className="text-lg tracking-[0.0806rem] font-bold uppercase text-black">
         Summary
       </h2>
 
@@ -52,10 +52,12 @@ const Summary = ({
           ))}
         </ul>
       ) : (
-        <p className="text-center mt-6 font-bold">No Items in cart</p>
+        <p className="text-center mt-6 font-bold text-gray-400/80">
+          No Items in cart
+        </p>
       )}
 
-      <div className="mt-8">
+      <div className="mt-8 text-gray-400">
         <SummaryLine name="total" amount={cartTotal} />
         <SummaryLine name="shipping" amount={SHIPPING_FEE} />
         <SummaryLine name="vat (included)" amount={tax} />
@@ -67,10 +69,10 @@ const Summary = ({
         />
         <button
           type="submit"
-          className={`w-full mt-8 py-3 uppercase tracking-widest text-white ${
+          className={`w-full mt-8 py-3 uppercase tracking-widest text-white cursor-pointer ${
             isDisabled
               ? "bg-gray-400 cursor-not-allowed"
-              : "bg-orange-500 hover:bg-orange-600"
+              : "bg-orange-500/80 hover:bg-orange-600"
           }`}
           disabled={isDisabled}
         >

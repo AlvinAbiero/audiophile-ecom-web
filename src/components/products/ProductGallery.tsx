@@ -13,15 +13,11 @@ const ProductGallery = ({ first, second, third }: ProductGalleryProps) => {
       className="
         grid gap-5 mt-[5.5rem]
         sm:mt-[7.5rem] lg:mt-[10rem]
-        sm:grid-cols-[40%_1fr] sm:grid-rows-[auto_auto]
-        sm:grid-areas-['a_c''b_c']
+        sm:grid-cols-[40%_1fr] sm:grid-rows-[auto_auto] 
       "
-      style={{
-        gridTemplateAreas: `"a" "b" "c"`,
-      }}
     >
       {/* First Image */}
-      <picture style={{ gridArea: "a" }}>
+      <picture className="col-start-1 row-start-1">
         <source media="(min-width: 62em)" srcSet={first?.desktop} />
         <source media="(min-width: 30em)" srcSet={first?.tablet} />
         <Image
@@ -34,7 +30,7 @@ const ProductGallery = ({ first, second, third }: ProductGalleryProps) => {
       </picture>
 
       {/* Second Image */}
-      <picture style={{ gridArea: "b" }}>
+      <picture className="cols-start-1 row-start-2">
         <source media="(min-width: 62em)" srcSet={second?.desktop} />
         <source media="(min-width: 30em)" srcSet={second?.tablet} />
         <Image
@@ -47,7 +43,7 @@ const ProductGallery = ({ first, second, third }: ProductGalleryProps) => {
       </picture>
 
       {/* Third Image */}
-      <picture style={{ gridArea: "c" }}>
+      <picture className="cols-start-2 row-start-1 row-span-2">
         <source media="(min-width: 62em)" srcSet={third?.desktop} />
         <source media="(min-width: 30em)" srcSet={third?.tablet} />
         <Image
