@@ -35,7 +35,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.className}  antialiased`}>
         <Header />
-        <main className="mx-auto">{children}</main>
+        <main className="mx-auto overflow-hidden">{children}</main>
         <Footer />
         <CartModal />
         <CheckoutModal />
