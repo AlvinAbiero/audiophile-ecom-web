@@ -18,8 +18,8 @@ const CategoryLink = ({
           <Image
             src={img || ""}
             alt=""
-            width={120}
-            height={120}
+            width={100}
+            height={100}
             aria-hidden="true"
             objectFit="cover"
             className="absolute top-0 left-[50%] translate-x-[-50%] translate-y-[-38%] w-[8rem]"
