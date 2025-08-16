@@ -14,7 +14,7 @@ const MobileNav = () => {
           : "opacity-0 invisible -translate-y-full"
       }`}
     >
-      <div className="sm:flex-row flex-column space-y-3 sm:space-y-0 gap-2 mt-20">
+      <div className="sm:flex-row flex-column space-y-16 sm:space-y-0 gap-2 mt-20">
         {links.slice(1).map((link) => (
           <CategoryLink {...link} key={link.id} />
         ))}
