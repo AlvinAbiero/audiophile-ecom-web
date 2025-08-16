@@ -7,19 +7,12 @@ import ProductDetails from "@/components/ProductDetails";
 import GoBackLink from "@/components/links/GoBackLink";
 
 interface ProductPageProps {
-  params: Params;
+  params: Promise<Params>;
 }
 
 export async function generateStaticParams(): Promise<Params[]> {
-  // console.log("Generating static params...");
-
   return products.map((product) => {
     const slug = product.slug;
-
-    // console.log(`Generated params for ${product.name}:`, {
-    //   category: product.category,
-    //   slug: slug,
-    // });
 
     return {
       category: product.category,
@@ -30,37 +23,26 @@ export async function generateStaticParams(): Promise<Params[]> {
 
 // Find product helper function
 function findProduct(category: string, slug: string): Product | undefined {
-  // console.log("Searching for product:", { category, slug });
-
   // Find product by exact match first
   let product = products.find((p) => {
     const exactMatch = p.category === category && p.slug === slug;
-    // console.log(
-    //   `Checking ${p.name}: category=${p.category}, slug=${p.slug}, exactMatch=${exactMatch}`
-    // );
+
     return exactMatch;
   });
 
   // If no exact match, try with slug extraction for category-prefixed slugs
   if (!product) {
-    // console.log("No exact match found, trying slug extraction...");
     product = products.find((p) => {
       if (p.slug.includes("/")) {
         const extractedSlug = p.slug.split("/")[1];
         const match = p.category === category && extractedSlug === slug;
-        // console.log(
-        //   `Checking ${p.name} with extraction: originalSlug=${p.slug}, extractedSlug=${extractedSlug}, match=${match}`
-        // );
+
         return match;
       }
       return false;
     });
   }
 
-  // console.log(
-  //   "Final result:",
-  //   product ? `Found: ${product.name}` : "Not found"
-  // );
   return product;
 }
 

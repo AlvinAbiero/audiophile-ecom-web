@@ -14,9 +14,9 @@ function isValidCategory(category: string): boolean {
   return validCategories.includes(category.toLowerCase());
 }
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     category: string;
-  };
+  }>;
 }
 export async function generateStaticParams() {
   const categories = getCategories();
