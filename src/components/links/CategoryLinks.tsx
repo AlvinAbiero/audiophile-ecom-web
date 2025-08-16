@@ -4,7 +4,7 @@ import CategoryLink from "./CategoryLink";
 
 const CategoryLinks = () => {
   return (
-    <div className="md:flex-row flex-column flex-wrap xl:gap-[4rem] lg:gap-[1.875rem] gap-[0.625rem] mt-[4.75rem] md:mt-[12.5rem] sm:mt-[9.25rem]">
+    <div className="md:flex-row flex-column space-y-4 md:space-y-0 flex-wrap xl:gap-[4rem] lg:gap-[1.875rem] gap-[0.625rem] mt-[4.75rem] md:mt-[12.5rem] sm:mt-[9.25rem]">
       {links.slice(1).map((link) => (
         <CategoryLink {...link} key={link.id} />
       ))}
